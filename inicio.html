@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✅ Sucesso! - Guardiões do Oceano</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0f7fa 0%, #a8e6cf 50%, #dcedc1 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .sucesso-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            max-width: 600px;
+            width: 90%;
+            padding: 60px 40px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 
+                0 30px 80px rgba(39, 174, 96, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.5);
+            position: relative;
+            animation: floatIn 1s ease-out;
+        }
+
+        @keyframes floatIn {
+            0% {
+                transform: translateY(50px) scale(0.9);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .icone-sucesso {
+            font-size: 6rem;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+            60% { transform: translateY(-8px); }
+        }
+
+        .sucesso-container h1 {
+            color: #27ae60;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .sucesso-container p {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .btn-voltar {
+            background: linear-gradient(135deg, #007c91, #00acc1);
+            color: white;
+            padding: 18px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(0, 124, 145, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-voltar:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 124, 145, 0.5);
+            background: linear-gradient(135deg, #004d40, #006064);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            min-width: 120px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-numero {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #27ae60;
+            display: block;
+        }
+
+        .stat-texto {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 600px) {
+            .sucesso-container {
+                padding: 40px 25px;
+                margin: 20px;
+            }
+            .sucesso-container h1 { font-size: 2.2rem; }
+            .sucesso-container p { font-size: 1.1rem; }
+            .stats { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="sucesso-container">
+        <div class="icone-sucesso">🌊✅</div>
+        
+        <h1>Obrigado, Guardião do Oceano!</h1>
+        
+        <p>Suas respostas foram <strong>salvas com sucesso</strong> no nosso banco de dados.<br>
+        Sua voz está ajudando a proteger os oceanos! 🐬🪸</p>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-numero">1</span>
+                <span class="stat-texto">Resposta salva</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-numero">100%</span>
+                <span class="stat-texto">Validação OK</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-numero">✅</span>
+                <span class="stat-texto">Sem duplicatas</span>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-voltar">🏠 Responder Novamente</a>
+    </div>
+
+    <!-- EFEITOS DE FUNDO -->
+    <div class="bubble" style="left: 10%; width: 30px; height: 30px; animation-delay: 0s;"></div>
+    <div class="bubble" style="left: 70%; width: 20px; height: 20px; animation-delay: 2s;"></div>
+    <div class="water-drop" style="left: 20%; animation-delay: 1s;"></div>
+    <div class="water-drop" style="left: 80%; animation-delay: 3s;"></div>
+</body>
+</html> 

@@ -1,0 +1,827 @@
+/* ================= DECORAÇÃO DE FUNDO ================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, #003366, #006994, #00aaff);
+    font-family: 'DM Sans', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: radial-gradient(
+        circle,
+        rgba(255,255,255,0.15) 2px,
+        transparent 2px
+    );
+
+    background-size: 60px 60px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+
+/* ================= MENU / HEADER ================= */
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+    margin: 20px;
+
+    font-size: 23px;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.logo span {
+    font-weight: 500;
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    color: white;
+}
+
+
+/* ================= MENU DE NAVEGAÇÃO ================= */
+
+.menu a {
+    color: white;
+    text-decoration: none;
+
+    margin-left: 15px;
+
+    font-weight: 500;
+    font-family: 'Sora', sans-serif;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #00e5ff;
+    letter-spacing: 1px;
+}
+
+
+/* ================= TEXTOS ================= */
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+
+    color: white;
+
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+
+    animation: flutuar 3s ease-in-out infinite alternate;
+
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+}
+
+h1::after {
+    content: "";
+
+    display: block;
+
+    width: 120px;
+    height: 3px;
+
+    background: #00e5ff;
+
+    margin: 10px auto;
+
+    border-radius: 10px;
+}
+
+.frase {
+    text-align: center;
+    margin-bottom: 60px;
+
+    color: #00e5ff;
+
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* ================= APRESENTAÇÕES ================= */
+
+.apresentação1,
+.apresentação2,
+.apresentação3,
+.apresentação4,
+.apresentação5,
+.apresentação6,
+.apresentação7,
+.apresentação8,
+.apresentação9,
+.apresentação10 {
+    text-align: justify;
+
+    max-width: 900px; /*Define a largura máxima do elemento*/
+
+    margin: 0 auto; /*deixa caixas no centro da página.*/
+
+    color: rgb(255, 255, 255); /*cor do texto*/
+
+    font-size: 17px; /*Define o tamanho da letra.*/
+
+    background: rgba(255, 255, 255, 0.089); /*Define a cor das caixas de fundo*/
+
+    padding: 20px; /*Distância entre o conteúdo e a borda da caixa*/
+
+    border-radius: 15px; /*Arredonda as bordas.*/
+
+    backdrop-filter: blur(10px); /*Aplica desfoque no fundo atrás do elemento.*/
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /*Cria sombra na caixa.*/
+
+    font-family: 'DM Sans', sans-serif; /*Define a fonte do texto.*/
+}
+
+.apresentação1 {
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
+}
+
+.apresentação2 {
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
+}
+
+.apresentação3 {
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
+}
+
+.apresentação4 {
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
+}
+
+.apresentação5 {
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
+}
+
+.apresentação6 {
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
+}
+
+.apresentação7 {
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
+}
+
+.apresentação8 {
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
+}
+
+.apresentação9 {
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
+}
+.apresentação10 {
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
+}
+
+/* ================= VÍDEO ================= */
+
+iframe {
+    display: block;
+
+    margin: 50px auto;
+
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+
+     width: 100%;
+
+    height: 315px;
+
+    border-radius: 20px;
+}
+
+
+.documentario {
+
+    margin-top: 50px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.documentario h3 {
+
+    margin-bottom: 15px;
+
+    font-size: 24px;
+}
+
+.documentario p {
+
+    margin-bottom: 15px;
+
+    line-height: 1.6;
+}
+
+.documentario a {
+
+    color:rgb(21, 15, 78);
+
+    text-decoration: none;
+
+    font-weight: 600;
+    
+     transition: 0.3s;
+}
+
+.documentario a:hover {
+
+    color: white;
+
+     letter-spacing: 1px;
+}
+
+/* ================= LAYOUT ================= */
+
+.container {
+    display: flex; /*Ativa o Flexbox, um sistema de organização de elementos. Por padrão, os itens ficam lado a lado.*/
+    gap: 30px; /*Cria espaço ENTRE os itens do flex.*/
+    padding: 20px; /*Afastando o conteúdo das bordas.*/
+}
+
+.conteudo {
+    flex: 2;
+}
+
+.lateral {
+    flex: 1;
+}
+
+
+/* ================= IMAGEM LATERAL ================= */
+
+.imagem-lateral1 {
+    width: 100%;
+
+    border-radius: 15px;
+
+    margin-bottom: 10px;
+}
+
+
+.imagem-lateral2 {
+    width: 100%;
+
+    border-radius: 15px;
+
+    margin: 20px auto;
+}
+
+/* ================= CARD ================= */
+
+.card-info {
+    background: rgba(255,255,255,0.08);
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    color: white;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+    margin: 50px auto;
+}
+
+
+/* ================= POSICIONAMENTO ================= */
+
+.container,
+.topo,
+.lateral,
+.conteudo {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ================= ANIMAÇÃO DOS TÍTULOS ================= */
+
+@keyframes flutuar {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+/*======================= FONTES =============================*/
+
+.fontes {
+
+    max-width: 900px;
+
+    margin: 80px auto;
+
+    padding: 30px;
+
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    text-align: center;
+}
+
+.fontes h2 {
+
+    margin-bottom: 20px;
+
+    font-size: 35px;
+
+    font-family: 'Sora', sans-serif;
+}
+
+.fontes p {
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+}
+
+.fontes a {
+
+    color: #1f2353;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.fontes a:hover {
+
+    color: white;
+
+    letter-spacing: 1px;
+}
+/* ================= BOLHAS ================= */
+
+.bolhas {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+.bolhas span {
+    position: absolute;
+
+    bottom: -50px;
+
+    width: 20px;
+    height: 20px;
+
+    background: rgba(255,255,255,0.3);
+
+    border-radius: 50%;
+
+    animation: subir 10s linear infinite;
+}
+
+.bolhas span:nth-child(1) {
+    left: 10%;
+    width: 15px;
+    height: 15px;
+    animation-duration: 8s;
+}
+
+.bolhas span:nth-child(2) {
+    left: 25%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 12s;
+}
+
+.bolhas span:nth-child(3) {
+    left: 40%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 9s;
+}
+
+.bolhas span:nth-child(4) {
+    left: 55%;
+    width: 18px;
+    height: 18px;
+    animation-duration: 11s;
+}
+
+.bolhas span:nth-child(5) {
+    left: 70%;
+    width: 22px;
+    height: 22px;
+    animation-duration: 7s;
+}
+
+.bolhas span:nth-child(6) {
+    left: 85%;
+    width: 16px;
+    height: 16px;
+    animation-duration: 10s;
+}
+
+.bolhas span:nth-child(7) {
+    left: 95%;
+    width: 24px;
+    height: 24px;
+    animation-duration: 13s;
+}
+
+
+/* ================= ANIMAÇÃO DAS BOLHAS ================= */
+
+@keyframes subir {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+
+/* ================= RODAPÉ ================= */
+
+.rodape {
+    background-color: #1c1c1c;
+
+    width: 100%;
+    min-height: 250px;
+
+    padding: 60px 0;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+
+    box-sizing: border-box;
+}
+
+
+/* ================= TÍTULOS DO RODAPÉ ================= */
+
+h4 {
+    color: #00aaff;
+
+    margin-bottom: 20px;
+
+    font-size: 22px;
+}
+
+
+/* ================= RODAPÉ MODERNO ================= */
+
+.rodape {
+    background: linear-gradient(to top, #001f33, #003366);
+
+    color: white;
+
+    padding: 50px 20px 20px;
+}
+
+.rodape-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 80px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.rodape-col,
+.questionario {
+    padding: 10px;
+}
+
+.rodape-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.rodape-col h2 {
+    font-family: 'Sora', sans-serif;
+
+    margin-bottom: 10px;
+}
+
+.rodape-col h4 {
+    margin-bottom: 15px;
+
+    color: #00e5ff;
+}
+
+.rodape-col p {
+    font-size: 14px;
+
+    opacity: 0.8;
+}
+
+.rodape-col a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    margin-bottom: 8px;
+
+    transition: 0.3s;
+}
+
+.rodape-col a:hover {
+    color: #00e5ff;
+
+    transform: translateX(5px);
+}
+
+
+/* ================= BOTÕES SOCIAIS ================= */
+
+.insta-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(0,229,255,0.3);
+
+    backdrop-filter: blur(10px);
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.insta-box:hover {
+    background: rgba(0,229,255,0.2);
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 15px rgba(0,229,255,0.5);
+}
+
+.insta-box img {
+    width: 25px;
+    height: 25px;
+
+    object-fit: contain;
+}
+
+
+/* ================= DETALHES FINAIS ================= */
+
+.copy {
+    text-align: center;
+
+    margin-top: 30px;
+
+    font-size: 13px;
+
+    opacity: 0.6;
+}
+
+.rodape-texto {
+    font-size: 14px;
+
+    opacity: 0.8;
+
+    margin-bottom: 20px;
+}
+
+.linha {
+    width: 80%;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #00e5ff,
+        transparent
+    );
+
+    margin: 30px auto;
+}
+
+
+/* ================= FALE CONOSCO ================= */
+
+.questionario {
+    flex: 1;
+    min-width: 200px;
+}
+
+.questionario h4 {
+    margin-bottom: 15px;
+
+    color: #00e5ff;
+
+    font-size: 22px;
+}
+
+.fale-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(0,229,255,0.3);
+
+    backdrop-filter: blur(10px);
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    color: white;
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.fale-box:hover {
+    background: rgba(0,229,255,0.2);
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 15px rgba(0,229,255,0.5);
+}
+
+/* MASCOTE TARTARUGA */
+.mascote-tartaruga {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    z-index: 999;
+    cursor: pointer;
+    animation: flutuarTartaruga 3s ease-in-out infinite;
+}
+
+.mascote-tartaruga img {
+    width: 100%;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+}
+
+/* BALÃO DE FALA */
+
+.mascote-tartaruga .fala {
+    position: absolute;
+    bottom: 120px;
+    right: 20px;
+
+    width: 220px;
+
+    padding: 14px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    display: none;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+    animation: aparecerFala 0.4s ease;
+}
+
+/* pontinha do balão */
+.mascote-tartaruga .fala::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -10px;
+    right: 25px;
+
+    width: 20px;
+    height: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    transform: rotate(45deg);
+
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* animação */
+@keyframes aparecerFala {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* animação de flutuar */
+@keyframes flutuarTartaruga {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}

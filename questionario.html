@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- ============================== HEAD / CONFIGURAÇÕES ============================== -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azul Consciente - Formulário</title>
+
+    <link rel="stylesheet" href="questionario.css">
+    <link rel="icon" href="logo.jpeg" type="image/png">
+</head>
+
+
+<!-- ============================== BODY ============================== -->
+<body>
+
+
+<!-- ============================== EFEITOS DE FUNDO (ANIMAÇÕES) ============================== -->
+<div class="bubble" style="left: 5%; width: 20px; height: 20px; animation-delay: 0s;"></div>
+<div class="bubble" style="left: 25%; width: 35px; height: 35px; animation-delay: 2s;"></div>
+<div class="bubble" style="left: 50%; width: 15px; height: 15px; animation-delay: 4s;"></div>
+<div class="bubble" style="left: 80%; width: 25px; height: 25px; animation-delay: 1s;"></div>
+
+<div class="water-drop" style="left: 10%; width: 12px; height: 12px; animation-delay: 0s;"></div>
+<div class="water-drop" style="left: 30%; width: 18px; height: 18px; animation-delay: 1.5s;"></div>
+<div class="water-drop" style="left: 50%; width: 14px; height: 14px; animation-delay: 0.5s;"></div>
+<div class="water-drop" style="left: 70%; width: 20px; height: 20px; animation-delay: 2.2s;"></div>
+<div class="water-drop" style="left: 90%; width: 12px; height: 12px; animation-delay: 1s;"></div>
+
+
+<!-- ============================== CONTAINER PRINCIPAL ============================== -->
+<div class="container">
+
+
+    <!-- ============================== HEADER DO FORMULÁRIO ============================== -->
+    <header>
+        <h1> Azul Consciente</h1>
+        <p>"Os oceanos são o coração da Terra. Sua voz ajuda a protegê-los."</p>
+    </header>
+
+
+    <!-- ============================== FORMULÁRIO PRINCIPAL ============================== -->
+    <form id="oceanForm">
+
+
+        <!-- ============================== SEÇÃO 1 - IDENTIFICAÇÃO ============================== -->
+        <section class="form-section section-1">
+
+            <div class="section-header">
+                <h2>1. Identificação do Protetor</h2>
+                <div class="wave-divider wave-1"></div>
+            </div>
+
+            <label for="nome"> Como podemos te chamar?</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            <div class="erro-mensagem" id="nomeErro"></div>
+
+            <label for="email"> Qual o seu melhor e-mail?</label>
+            <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+            <div class="erro-mensagem" id="emailErro"></div>
+
+        </section>
+
+
+        <!-- ============================== SEÇÃO 2 - EXPERIÊNCIA ============================== -->
+        <section class="form-section section-2">
+
+            <div class="section-header">
+                <h2>2. Sua Experiência com o Site</h2>
+                <div class="wave-divider wave-2"></div>
+            </div>
+
+
+            <!-- EDUCAÇÃO -->
+        
+            <p>Qual dessas informações educacionais você não sabia e que nosso site te ajudou a descobrir?</p>
+
+            <div class="select-wrapper">
+                <select id="educacao" name="educacao_descoberta" required>
+                    <option value="" disabled selected> Selecione uma descoberta</option>
+                    <option value="oxigenio"> Oxigênio dos oceanos</option>
+                    <option value="corais_animais"> Corais são animais</option>
+                    <option value="poluicao_sonora"> Poluição sonora</option>
+                    <option value="branqueamento">Branqueamento de corais</option>
+                    <option value="pesca_barbatanas"> Pesca de barbatanas</option>
+                </select>
+            </div>
+            <div class="erro-mensagem" id="educacaoErro"></div>
+
+
+            <!-- RADIO -->
+            <p>Como você avalia a facilidade de aprender sobre sustentabilidade marinha em nosso site?</p>
+
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="exp_aprendizado" value="excelente">
+                    <span class="radio-content"> Excelente: Aprendi coisas novas de forma leve e rápida</span>
+                </label>
+
+                <label class="radio-option">
+                    <input type="radio" name="exp_aprendizado" value="bom">
+                    <span class="radio-content"> Bom: Conteúdo útil, mas poderia ter mais fotos/vídeos</span>
+                </label>
+
+                <label class="radio-option">
+                    <input type="radio" name="exp_aprendizado" value="razoavel">
+                    <span class="radio-content"> Razoável: Informações boas, mas textos longos</span>
+                </label>
+
+                <label class="radio-option">
+                    <input type="radio" name="exp_aprendizado" value="dificil">
+                    <span class="radio-content"> Difícil: Termos técnicos complicados</span>
+                </label>
+            </div>
+
+            <div class="erro-mensagem" id="radioErro"></div>
+
+
+            <!-- MULTIPLICADOR -->
+            <p>Você se sente mais preparado(a) para explicar a importância dos oceanos?</p>
+
+            <div class="select-wrapper">
+                <select id="multiplicador" name="educacao_multiplicador" required>
+                    <option value="" disabled selected> Escolha sua resposta</option>
+                    <option value="totalmente"> Totalmente preparado!</option>
+                    <option value="parcialmente"> Parcialmente preparado</option>
+                    <option value="nao_muito"> Prefiro dicas por e-mail</option>
+                    <option value="quero_mais"> Quero guia/PDF para estudar</option>
+                </select>
+            </div>
+
+            <div class="erro-mensagem" id="multiplicadorErro"></div>
+
+
+            <!-- TEXTO -->
+            <p> Qual animal marinho mais te sensibilizou e por quê?</p>
+
+            <textarea id="opiniao" name="pergunta3" rows="4"
+                placeholder="Conte-nos o motivo... (mínimo 10 letras)" required></textarea>
+
+            <div class="erro-mensagem" id="opiniaoErro"></div>
+
+        </section>
+
+
+        <!-- ============================== BOTÃO FINAL ============================== -->
+        <div class="footer-form">
+
+            <p class="motivational-text">
+                "Juntos, somos a maré que transforma o mundo."
+            </p>
+
+            <button type="submit" id="btnEnviar">
+                Enviar meu Mergulho
+            </button>
+
+            <div id="mensagemSucesso" class="mensagem-sucesso" style="display: none;"></div>
+
+        </div>
+
+    </form>
+</div>
+
+
+<!-- ============================== ONDAS DECORATIVAS ============================== -->
+<div class="ocean-waves">
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 24 150 28" preserveAspectRatio="none">
+        <defs>
+            <path id="gentle-wave"
+                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+
+        <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(255,255,255,0.8)" />
+        </g>
+    </svg>
+</div>
+
+
+<!-- ============================== JAVASCRIPT ============================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("🌊 Sistema carregado (versão produção)");
+
+    const form = document.getElementById("oceanForm");
+    const nome = document.getElementById("nome");
+    const email = document.getElementById("email");
+    const educacao = document.getElementById("educacao");
+    const multiplicador = document.getElementById("multiplicador");
+    const opiniao = document.getElementById("opiniao");
+    const mensagemSucesso = document.getElementById("mensagemSucesso");
+
+    // ============================== VALIDAÇÃO AUTOMÁTICA EM TEMPO REAL ==============================
+
+    // Valida o nome caractere por caractere conforme digita
+    nome.addEventListener("input", function() {
+        const erro = document.getElementById("nomeErro");
+        if (nome.value.trim().length > 0 && nome.value.trim().length < 3) {
+            erro.textContent = "O nome precisa ter mais do que 2 caracteres.";
+        } else {
+            erro.textContent = ""; // Some automaticamente quando passa de 2 letras
+        }
+    });
+
+    // Valida o e-mail conforme digita
+    email.addEventListener("input", function() {
+        const erro = document.getElementById("emailErro");
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (email.value.trim().length > 0 && !regexEmail.test(email.value.trim())) {
+            erro.textContent = "Por favor, insira um e-mail válido.";
+        } else {
+            erro.textContent = ""; // Some automaticamente quando o formato fica correto
+        }
+    });
+
+    // Valida a caixa de texto do animal marinho conforme digita
+    opiniao.addEventListener("input", function() {
+        const erro = document.getElementById("opiniaoErro");
+        if (opiniao.value.trim().length > 0 && opiniao.value.trim().length < 10) {
+            erro.textContent = "Conte-nos mais! Escreva pelo menos 10 letras.";
+        } else {
+            erro.textContent = ""; // Some automaticamente ao atingir 10 letras
+        }
+    });
+
+    // Valida as seleções assim que o usuário escolhe uma opção
+    educacao.addEventListener("change", function() {
+        document.getElementById("educacaoErro").textContent = educacao.value === "" ? "Selecione uma opção." : "";
+    });
+
+    multiplicador.addEventListener("change", function() {
+        document.getElementById("multiplicadorErro").textContent = multiplicador.value === "" ? "Escolha uma resposta." : "";
+    });
+
+    // Valida os botões de rádio assim que clica
+    document.querySelectorAll('input[name="exp_aprendizado"]').forEach(radio => {
+        radio.addEventListener("change", function() {
+            document.getElementById("radioErro").textContent = "";
+        });
+    });
+
+
+    // ============================== VALIDAÇÃO FINAL AO ENVIAR ==============================
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        let valido = true;
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Força a exibição dos erros caso o usuário tente enviar com campos vazios
+        if (nome.value.trim().length < 3) {
+            document.getElementById("nomeErro").textContent = "O nome precisa ter mais do que 2 caracteres.";
+            valido = false;
+        }
+        if (!regexEmail.test(email.value.trim())) {
+            document.getElementById("emailErro").textContent = "Por favor, insira um e-mail válido.";
+            valido = false;
+        }
+        if (educacao.value === "") {
+            document.getElementById("educacaoErro").textContent = "Selecione uma opção de descoberta.";
+            valido = false;
+        }
+        if (!document.querySelector('input[name="exp_aprendizado"]:checked')) {
+            document.getElementById("radioErro").textContent = "Por favor, avalie sua experiência.";
+            valido = false;
+        }
+        if (multiplicador.value === "") {
+            document.getElementById("multiplicadorErro").textContent = "Escolha uma resposta.";
+            valido = false;
+        }
+        if (opiniao.value.trim().length < 10) {
+            document.getElementById("opiniaoErro").textContent = "Conte-nos mais! Escreva pelo menos 10 letras.";
+            valido = false;
+        }
+
+        if (valido) {
+            mensagemSucesso.textContent = "🐋 Obrigado por seu mergulho! Respostas enviadas com sucesso.";
+            mensagemSucesso.style.display = "block";
+            form.reset();
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,677 @@
+/* ================= CONFIGURAÇÃO GERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, #003366, #006994, #00aaff);
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+/* ================= FUNDO ================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: radial-gradient(circle,
+            rgba(255, 255, 255, 0.15) 2px,
+            transparent 2px);
+
+    background-size: 60px 60px;
+
+    opacity: 0.3;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* ================= HEADER ================= */
+
+.topo {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+
+    margin: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(0, 229, 255, 0.3);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.logo img {
+
+    width: 60px;
+
+    border-radius: 50%;
+}
+
+.logo span {
+
+    font-family: 'Sora', sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: white;
+}
+
+
+/* ================= MENU ================= */
+
+.menu a {
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-left: 15px;
+
+    font-family: 'Sora', sans-serif;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+
+    color: #00e5ff;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+
+    padding: 20px;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ================= TÍTULOS ================= */
+
+h1 {
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    color: white;
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    font-family: 'Sora', sans-serif;
+
+    font-weight: 600;
+}
+
+h2 {
+
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    color: white;
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    font-family: 'Sora', sans-serif;
+
+    font-weight: 600;
+}
+
+h3,
+h4 {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    color: white;
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    font-family: 'Sora', sans-serif;
+
+    font-weight: 600;
+}
+
+/* Apenas títulos do conteúdo se movimentam */
+
+.conteudo h1,
+.conteudo h2 {
+
+    animation: flutuar 3s ease-in-out infinite alternate;
+}
+
+h1::after {
+
+    content: "";
+
+    display: block;
+
+    width: 120px;
+    height: 3px;
+
+    background: #00e5ff;
+
+    margin: 10px auto;
+
+    border-radius: 10px;
+}
+
+
+/* ================= CAIXAS DE TEXTO ================= */
+
+.conteudo p,
+.conteudo ul {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+    color: white;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    text-align: justify;
+}
+
+
+/* ================= APRESENTAÇÕES ================= */
+
+.apresentação1,
+.apresentação2 {
+    margin-bottom: 20px;
+
+    text-align: initial;
+
+}
+
+.apresentação3,
+.apresentação4 {
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= RODAPÉ ================= */
+
+.rodape {
+
+    background: linear-gradient(to top, #001f33, #003366);
+
+    color: white;
+
+    padding: 50px 20px 20px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ================= CONTAINER DO RODAPÉ ================= */
+
+.rodape-container {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 80px;
+
+    max-width: 1200px;
+
+    margin: auto;
+  
+
+}
+
+
+/* ================= COLUNAS ================= */
+
+.rodape-col,
+.questionario {
+
+    padding: 10px;
+}
+
+.rodape-col {
+
+    flex: 1;
+
+    min-width: 200px;
+}
+
+.questionario {
+
+    flex: 1;
+
+    min-width: 200px;
+    
+}
+
+
+
+/* ================= TÍTULOS DO RODAPÉ ================= */
+
+.rodape-col h2 {
+
+    font-family: 'Sora', sans-serif;
+
+    margin-bottom: 10px;
+    
+}
+
+.rodape-col h4,
+.questionario h4 {
+   
+
+    justify-content: space-between;
+
+    margin-bottom:  15px;
+
+    color: #00e5ff;
+
+    font-size: 22px;
+
+    padding: 10px;
+
+}
+
+
+
+/* ================= TEXTOS ================= */
+
+.rodape-col p,
+    
+
+
+.rodape-texto {
+
+    
+    text-align: center;
+
+    font-size: 14px;
+
+    opacity: 0.8;
+
+    margin-bottom: 15px;
+
+    
+}
+
+
+/* ================= LINKS ================= */
+
+.rodape-col a {
+
+   text-align: center;
+   
+    display:block;
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-bottom: 8px;
+
+    transition: 0.3s;
+}
+
+
+
+
+.rodape-col a:hover {
+
+    
+    
+    color: #00e5ff;
+
+    transform: translateX(5px);
+}
+
+
+/* ================= BOTÕES ================= */
+
+.insta-box {
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: px solid rgba(0,229,255,0.3);
+
+    backdrop-filter: blur(10px);
+
+   padding: 10px 15px;
+
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.fale-box {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(0,229,255,0.3);
+
+    backdrop-filter: blur(10px);
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    color: white;
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.insta-box:hover,
+.fale-box:hover {
+
+    background: rgba(0, 229, 255, 0.2);
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+}
+
+
+/* ================= IMAGENS DOS BOTÕES ================= */
+
+.insta-box img {
+
+    width:25px;
+    height: 25px;
+
+    object-fit: contain;
+}
+
+
+/* ================= LINHA ================= */
+
+.linha {
+
+    width: 80%;
+    height: 1px;
+
+    background: linear-gradient(to right,
+            transparent,
+            #00e5ff,
+            transparent);
+
+    margin: 30px auto;
+}
+
+
+/* ================= COPYRIGHT ================= */
+
+.copy {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    font-size: 13px;
+
+    opacity: 0.6;
+}
+
+
+/* ================= BOLHAS ================= */
+
+.bolhas {
+
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+.bolhas span {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    width: 20px;
+    height: 20px;
+
+    background: rgba(255, 255, 255, 0.3);
+
+    border-radius: 50%;
+
+    animation: subir 10s linear infinite;
+}
+
+.bolhas span:nth-child(1) {
+    left: 10%;
+    width: 15px;
+    height: 15px;
+    animation-duration: 8s;
+}
+
+.bolhas span:nth-child(2) {
+    left: 25%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 12s;
+}
+
+.bolhas span:nth-child(3) {
+    left: 40%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 9s;
+}
+
+.bolhas span:nth-child(4) {
+    left: 55%;
+    width: 18px;
+    height: 18px;
+    animation-duration: 11s;
+}
+
+.bolhas span:nth-child(5) {
+    left: 70%;
+    width: 22px;
+    height: 22px;
+    animation-duration: 7s;
+}
+
+.bolhas span:nth-child(6) {
+    left: 85%;
+    width: 16px;
+    height: 16px;
+    animation-duration: 10s;
+}
+
+.bolhas span:nth-child(7) {
+    left: 95%;
+    width: 24px;
+    height: 24px;
+    animation-duration: 13s;
+}
+
+
+/* ================= ANIMAÇÃO DAS BOLHAS ================= */
+
+@keyframes subir {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+
+/* ================= ANIMAÇÃO DOS TÍTULOS ================= */
+
+@keyframes flutuar {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 768px) {
+
+    .topo {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .menu {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .logo span {
+
+        font-size: 18px;
+    }
+
+    h1 {
+
+        font-size: 28px;
+    }
+
+    h2 {
+
+        font-size: 22px;
+    }
+
+    .conteudo p,
+    .conteudo ul {
+
+        font-size: 16px;
+
+        padding: 20px;
+    }
+
+    .rodape-container {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+}
