@@ -79,6 +79,23 @@ body::before {
 
 /* ================= MENU DE NAVEGAÇÃO ================= */
 
+.menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+
+
+
+
+/**************************************************************/
 .menu a {
     color: white;
     text-decoration: none;
@@ -898,35 +915,37 @@ h4 {
 
     .menu{
 
-        position:absolute;
+    position:absolute;
 
-        top:100%;
+    top:100%;
 
-        left:0;
+    left:0;
 
-        width:100%;
+    width:100%;
 
-        display:none;
+    display:none;
 
-        flex-direction:column;
+    flex-direction:column;
 
-        align-items:center;
+    justify-content:center;
 
-        gap:18px;
+    align-items:center;
 
-        padding:30px;
+    gap:20px;
 
-        background:rgba(0,40,80,.96);
+    padding:25px 0;
 
-        backdrop-filter:blur(12px);
+    background:rgba(0,40,80,.95);
 
-        border-bottom-left-radius:20px;
+    backdrop-filter:blur(12px);
 
-        border-bottom-right-radius:20px;
+    border-bottom-left-radius:20px;
 
-        box-shadow:0 15px 30px rgba(0,0,0,.35);
+    border-bottom-right-radius:20px;
 
-    }
+    z-index:999;
+
+}
 
     .menu.ativo{
 
