@@ -385,6 +385,27 @@
 
        setTimeout(() => {
        fala.style.display = "none";}, 3000);});
+
+        /* ========================= */
+        /* MENU HAMBÚRGUER */
+        /* ========================= */
+        
+        const hamburguer = document.getElementById("hamburguer");
+        const menu = document.getElementById("menu");
+        
+        hamburguer.addEventListener("click", () => {
+        
+            menu.classList.toggle("ativo");
+        
+            if (menu.classList.contains("ativo")) {
+                hamburguer.innerHTML = "✕";
+            } else {
+                hamburguer.innerHTML = "☰";
+            }
+        
+        });
+
+
        
    </script>
 
